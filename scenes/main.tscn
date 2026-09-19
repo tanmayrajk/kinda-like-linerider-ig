@@ -47,3 +47,13 @@ scale = Vector2(0.1, 0.1)
 [node name="TileMapLayer" type="TileMapLayer" parent="pen"]
 tile_set = SubResource("TileSet_tipki")
 script = ExtResource("5_tefeu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 95.0
+offset_right = 145.0
+offset_bottom = 158.0
+text = "CLICK anywhere
+ to genrate road "
