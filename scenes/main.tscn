@@ -1,25 +1,29 @@
-[gd_scene format=3 uid="uid://cgvewubii4ca1"]
+[gd_scene load_steps=5 format=3 uid="uid://cgvewubii4ca1"]
 
 [ext_resource type="Texture2D" uid="uid://cairll5r8ant4" path="res://icon.svg" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dksjy6yduj422" path="res://scenes/player.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://mplpc4lobgbt" path="res://scenes/camera_2d.gd" id="3_sugp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35tmg"]
-size = Vector2(1000, 50)
+size = Vector2(7035, 93)
 
-[node name="main" type="Node2D" unique_id=1082448277]
+[node name="main" type="Node2D"]
 
-[node name="ground" type="StaticBody2D" parent="." unique_id=1393072704]
+[node name="ground" type="StaticBody2D" parent="."]
 position = Vector2(100, 320)
 
-[node name="Sprite2D" type="Sprite2D" parent="ground" unique_id=1784782983]
-position = Vector2(1.3589859e-05, 1.3828278e-05)
-scale = Vector2(7.8125, 0.3906247)
+[node name="Sprite2D" type="Sprite2D" parent="ground"]
+position = Vector2(3218, -6.999986)
+scale = Vector2(51.390625, 1)
 texture = ExtResource("1_o5qli")
-metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ground" unique_id=1077189958]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+position = Vector2(3017.5, -21.5)
 shape = SubResource("RectangleShape2D_35tmg")
-metadata/_edit_lock_ = true
 
-[node name="player" parent="." unique_id=291602364 instance=ExtResource("2_0wfyh")]
+[node name="player" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(70, 44)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(70, 199)
+script = ExtResource("3_sugp2")

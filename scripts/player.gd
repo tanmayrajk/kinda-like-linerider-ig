@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		velocity.y *= JUMP_CUT
 
-	var direction := Input.get_axis("move_left", "move_right")
+	var direction := 1.0 
 	if direction:
 		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION * delta)
 	else:
@@ -28,3 +28,13 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.flip_h = direction < 0
 
 	move_and_slide()
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
