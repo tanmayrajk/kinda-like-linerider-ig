@@ -4,16 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://dksjy6yduj422" path="res://scenes/player.tscn" id="2_0wfyh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35tmg"]
-size = Vector2(1000, 20)
+size = Vector2(1000, 50)
 
 [node name="main" type="Node2D" unique_id=1082448277]
 
 [node name="ground" type="StaticBody2D" parent="." unique_id=1393072704]
-position = Vector2(573, 607)
+position = Vector2(100, 320)
 
 [node name="Sprite2D" type="Sprite2D" parent="ground" unique_id=1784782983]
-position = Vector2(1.3589859e-05, -1.9073486e-06)
-scale = Vector2(7.8125, 0.15625001)
+position = Vector2(1.3589859e-05, 1.3828278e-05)
+scale = Vector2(7.8125, 0.3906247)
 texture = ExtResource("1_o5qli")
 metadata/_edit_lock_ = true
 
@@ -22,4 +22,4 @@ shape = SubResource("RectangleShape2D_35tmg")
 metadata/_edit_lock_ = true
 
 [node name="player" parent="." unique_id=291602364 instance=ExtResource("2_0wfyh")]
-position = Vector2(588, 481)
+position = Vector2(70, 44)
