@@ -15,7 +15,6 @@ texture = ExtResource("4_tbgi4")
 0:0/next_alternative_id = 2
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-408, -256, 416, -248, 408, 240, -408, 248)
-0:0/1 = 1
 
 [sub_resource type="TileSet" id="TileSet_tipki"]
 physics_layer_0/collision_layer = 1
@@ -27,12 +26,12 @@ sources/0 = SubResource("TileSetAtlasSource_o6xl0")
 position = Vector2(100, 320)
 
 [node name="Sprite2D" type="Sprite2D" parent="ground"]
-position = Vector2(3218, -6.999986)
+position = Vector2(-2860, -8)
 scale = Vector2(51.390625, 1)
 texture = ExtResource("1_o5qli")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
-position = Vector2(3017.5, -24.5)
+position = Vector2(-2379, 2)
 shape = SubResource("RectangleShape2D_35tmg")
 
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
@@ -43,7 +42,8 @@ position = Vector2(70, 199)
 script = ExtResource("3_sugp2")
 
 [node name="pen" type="Node2D" parent="."]
+scale = Vector2(0.1, 0.1)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="pen"]
 tile_set = SubResource("TileSet_tipki")
 script = ExtResource("5_tefeu")
