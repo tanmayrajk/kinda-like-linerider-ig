@@ -18,6 +18,7 @@ func _ready() -> void:
 	
 	
 
+
 func left_slide():
 	var i =0
 	for x in pens.size():
