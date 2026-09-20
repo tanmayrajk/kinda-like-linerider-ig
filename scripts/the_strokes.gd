@@ -16,6 +16,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				current_line.joint_mode = Line2D.LINE_JOINT_ROUND
 				
 				var body := StaticBody2D.new()
+				#body.sync_to_physics = true
 				current_line.add_child(body)
 				
 				add_child(current_line)
