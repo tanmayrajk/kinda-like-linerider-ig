@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bke1j63due2p2"]
+[gd_scene load_steps=0 format=3 uid="uid://bke1j63due2p2"]
 
 [ext_resource type="Script" uid="uid://dw5khhdi56a07" path="res://scripts/procedural_terrain.gd" id="1_lkupf"]
 

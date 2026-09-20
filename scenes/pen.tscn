@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://ey0gu7ts4mwd"]
+
+[ext_resource type="Script" uid="uid://biyy0o832qgl3" path="res://scripts/pens.gd" id="1_spjee"]
+[ext_resource type="Texture2D" uid="uid://cairll5r8ant4" path="res://icon.svg" id="2_xbp3v"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_spjee")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="pen_1" type="Sprite2D" parent="."]
+texture = ExtResource("2_xbp3v")
+
+[node name="pen_2" type="Sprite2D" parent="."]
+rotation = 1.5707964
+texture = ExtResource("2_xbp3v")
+
+[node name="pen_3" type="Sprite2D" parent="."]
+rotation = 3.1415927
+texture = ExtResource("2_xbp3v")
+
+[node name="left_btn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -302.0
+offset_top = -69.0
+offset_right = -174.0
+offset_bottom = 59.0
+texture_normal = ExtResource("2_xbp3v")
+
+[node name="right_btn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = -67.0
+offset_right = 311.0
+offset_bottom = 61.0
+texture_normal = ExtResource("2_xbp3v")
+
+[node name="back_btn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -418.0
+offset_top = -344.0
+offset_right = -290.0
+offset_bottom = -216.0
+texture_normal = ExtResource("2_xbp3v")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.22, 0.22)

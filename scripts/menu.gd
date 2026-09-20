@@ -19,7 +19,7 @@ func garage_open():
 	get_tree().change_scene_to_file("")
 	
 func pens_select():
-	get_tree().change_scene_to_file("")
+	get_tree().change_scene_to_file("res://scenes/pen.tscn")
 	
 func level_select():
 	get_tree().change_scene_to_file("")
