@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dch1v4m2u2sd6"]
+
+[ext_resource type="Script" uid="uid://d3nl0tkwp2jv7" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://dh88s0k5bduh1" path="res://assets/guy-idle.png" id="3_qhqgy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_21crw"]
+radius = 6.0
+height = 26.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ngxb"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whp64"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_35tmg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ngxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whp64")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D" unique_id=534280259]
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1245080201]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_21crw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=354860514]
+sprite_frames = SubResource("SpriteFrames_35tmg")
+animation = &"idle"
+metadata/_edit_lock_ = true

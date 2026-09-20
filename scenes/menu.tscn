@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://vi7dl71vomv4"]
+
+[ext_resource type="Script" uid="uid://kjxw22t126y" path="res://scripts/menu.gd" id="1_8aat6"]
+[ext_resource type="Script" uid="uid://c4yqhvoxun0c5" path="res://scripts/play_button.gd" id="2_ugn2o"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8aat6")
+
+[node name="play_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_ugn2o")
+
+[node name="garage_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="pens_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="setting_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="level_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
