@@ -61,7 +61,7 @@ func _process(delta: float) -> void:
 [node name="main" type="Node2D" unique_id=1209180813]
 
 [node name="moving_world" type="Node2D" parent="." unique_id=1843435256]
-position = Vector2(327, 374)
+position = Vector2(798, 160)
 script = ExtResource("2_sfrgt")
 
 [node name="the_strokes" type="Node2D" parent="moving_world" unique_id=1621566685]
@@ -82,5 +82,6 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 metadata/_edit_lock_ = true
 
-[node name="wall_spawner" type="Node2D" parent="." unique_id=658743347]
+[node name="wall_spawner" type="Node2D" parent="." unique_id=658743347 node_paths=PackedStringArray("playerNode")]
 script = ExtResource("4_sfrgt")
+playerNode = NodePath("../player")

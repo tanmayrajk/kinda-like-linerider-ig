@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bke1j63due2p2"]
+
+[ext_resource type="Script" uid="uid://dw5khhdi56a07" path="res://scripts/procedural_terrain.gd" id="1_lkupf"]
+
+[node name="procedural terrain" type="Node2D" unique_id=1948443386]
+script = ExtResource("1_lkupf")
+
+[node name="bottom_line" type="Line2D" parent="." unique_id=1963120348]
+position = Vector2(0, 255)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="top_line" type="Line2D" parent="." unique_id=695557776]
+position = Vector2(0, 56)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
