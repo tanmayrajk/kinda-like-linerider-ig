@@ -6,13 +6,16 @@
 script = ExtResource("1_lkupf")
 
 [node name="bottom_line" type="Line2D" parent="." unique_id=1963120348]
-position = Vector2(0, 255)
+position = Vector2(0, 224)
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="top_line" type="Line2D" parent="." unique_id=695557776]
-position = Vector2(0, 56)
+position = Vector2(0, 94)
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
+
+[node name="bottom_gon" type="Polygon2D" parent="." unique_id=148778136]
+position = Vector2(0, 224)
