@@ -24,4 +24,9 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	pass
+	var rand_y = randf_range(-267, -200)
+	top_wall_line.add_point(Vector2(0, 0))
+	top_wall_line.add_point(Vector2(500, rand_y))
+	
+	#bottom_wall_line.add_point(Vector2(0, 500))
+	#bottom_wall_line.add_point(Vector2(500, 500))

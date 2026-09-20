@@ -1,11 +1,4 @@
-[gd_scene format=3 uid="uid://uey54unyj4jv"]
-
-[ext_resource type="PackedScene" uid="uid://dch1v4m2u2sd6" path="res://scenes/player.tscn" id="2_0wfyh"]
-[ext_resource type="Script" uid="uid://da1xie7oek4ts" path="res://scripts/moving_world.gd" id="2_sfrgt"]
-[ext_resource type="Script" uid="uid://d2gllhgjhfrom" path="res://scripts/wall_spawner.gd" id="4_sfrgt"]
-
-[sub_resource type="GDScript" id="GDScript_jyhfs"]
-script/source = "extends Node2D
+extends Node2D
 
 var drawing := false
 var current_line: Line2D
@@ -56,31 +49,3 @@ func _process(delta: float) -> void:
 	collision.rotation = old_point.angle_to_point(new_point) - PI / 2.0
 	
 	current_line.get_child(0).add_child(collision)
-"
-
-[node name="main" type="Node2D" unique_id=1209180813]
-
-[node name="moving_world" type="Node2D" parent="." unique_id=1843435256]
-position = Vector2(327, 374)
-script = ExtResource("2_sfrgt")
-
-[node name="the_strokes" type="Node2D" parent="moving_world" unique_id=1621566685]
-script = SubResource("GDScript_jyhfs")
-metadata/_edit_lock_ = true
-
-[node name="player" parent="." unique_id=534280259 instance=ExtResource("2_0wfyh")]
-position = Vector2(78, 160)
-
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=394437493]
-offset = Vector2(56.34, 0)
-drag_vertical_enabled = true
-drag_left_margin = 0.67
-drag_top_margin = 1.0
-drag_right_margin = 0.0
-drag_bottom_margin = 1.0
-editor_draw_limits = true
-editor_draw_drag_margin = true
-metadata/_edit_lock_ = true
-
-[node name="wall_spawner" type="Node2D" parent="." unique_id=658743347]
-script = ExtResource("4_sfrgt")
