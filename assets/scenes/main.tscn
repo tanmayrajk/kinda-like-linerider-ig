@@ -1,47 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgvewubii4ca1"]
+[gd_scene format=3 uid="uid://uey54unyj4jv"]
 
-[ext_resource type="Texture2D" uid="uid://cairll5r8ant4" path="res://icon.svg" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://dksjy6yduj422" path="res://assets/scenes/player.tscn" id="2_0wfyh"]
-[ext_resource type="Script" uid="uid://mplpc4lobgbt" path="res://scripts/camera_2d.gd" id="3_sugp2"]
-[ext_resource type="Script" uid="uid://bj5acg6rt0kd8" path="res://scripts/doodle.gd" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://dwivi4t08lxhu" path="res://assets/scenes/stroke.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://dch1v4m2u2sd6" path="res://assets/scenes/player.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://da1xie7oek4ts" path="res://scripts/moving_world.gd" id="2_sfrgt"]
+[ext_resource type="Script" uid="uid://db1jr5yxrfpcd" path="res://scripts/the_strokes.gd" id="3_etxf0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_35tmg"]
-size = Vector2(7035, 93)
+[node name="main" type="Node2D" unique_id=1209180813]
 
-[node name="main" type="Node2D"]
+[node name="moving_world" type="Node2D" parent="." unique_id=1843435256]
+script = ExtResource("2_sfrgt")
 
-[node name="ground" type="StaticBody2D" parent="."]
-position = Vector2(100, 320)
+[node name="the_strokes" type="Node2D" parent="moving_world" unique_id=1621566685]
+script = ExtResource("3_etxf0")
 
-[node name="Sprite2D" type="Sprite2D" parent="ground"]
-position = Vector2(-2860, -8)
-scale = Vector2(51.390625, 1)
-texture = ExtResource("1_o5qli")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
-position = Vector2(-2379, 2)
-shape = SubResource("RectangleShape2D_35tmg")
-
-[node name="player" parent="." instance=ExtResource("2_0wfyh")]
-position = Vector2(70, 44)
-floor_constant_speed = true
-floor_snap_length = 10.0
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(70, 199)
-script = ExtResource("3_sugp2")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
-offset_left = 10.0
-offset_top = 95.0
-offset_right = 145.0
-offset_bottom = 158.0
-text = "CLICK anywhere
- to genrate road "
-
-[node name="doodle" type="Node2D" parent="."]
-script = ExtResource("6_tefeu")
-stroke_scene = ExtResource("7_o6xl0")
+[node name="player" parent="." unique_id=534280259 instance=ExtResource("2_0wfyh")]
+position = Vector2(149, 54)
