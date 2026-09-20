@@ -1,11 +1,28 @@
 extends Control
-var play_scene = load()
 
+@onready var play_button = $play_button
+@onready var garage_button = $garage_button
+@onready var pens_button = $pens_button
+@onready var level_button = $level_button
+@onready var setting_button = $setting_button
 
-
-
-@onready var play_button = $PlayButton
-@onready var garage_button = $GarageButton
-@onready var pens_button = $Pens_Button
-@onready var setting_button = $SettingButton
-@onready var levels_button = $LevelButton
+func _ready() -> void:
+	play_button.pressed.connect(play)
+	garage_button.pressed.connect(garage_open)
+	pens_button.pressed.connect(pens_select)
+	level_button.pressed.connect(level_select)
+	setting_button.pressed.connect(setting_open)
+	
+func play():
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
+func garage_open():
+	get_tree().change_scene_to_file("")
+	
+func pens_select():
+	get_tree().change_scene_to_file("")
+	
+func level_select():
+	get_tree().change_scene_to_file("")
+	
+func setting_open():
+	get_tree().change_scene_to_file("")

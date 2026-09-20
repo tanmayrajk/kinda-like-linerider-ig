@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://vi7dl71vomv4"]
+[gd_scene load_steps=14 format=3 uid="uid://vi7dl71vomv4"]
 
 [ext_resource type="Script" uid="uid://kjxw22t126y" path="res://scripts/menu.gd" id="1_8aat6"]
-[ext_resource type="Script" uid="uid://c4yqhvoxun0c5" path="res://scripts/play_button.gd" id="2_ugn2o"]
+[ext_resource type="Texture2D" uid="uid://ba7tngrk765sl" path="res://assets/New Folder/play_button_unselected.png" id="2_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://bba57iynay0sw" path="res://assets/New Folder/play_button_selected.png" id="3_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://dtdyod6ehrewk" path="res://assets/New Folder/garage_button_unselected.png" id="4_70i5f"]
+[ext_resource type="Texture2D" uid="uid://cpvipj4t5d2jt" path="res://assets/New Folder/garage_button_selected.png" id="5_mj5lg"]
+[ext_resource type="Texture2D" uid="uid://c7jhgcg7iqy7u" path="res://assets/New Folder/pen_button_unselected.png" id="6_ufwb2"]
+[ext_resource type="Texture2D" uid="uid://crjnbp3lust3x" path="res://assets/New Folder/pen_button_selected.png" id="7_6cdou"]
+[ext_resource type="Texture2D" uid="uid://b30ecppfj3al5" path="res://assets/New Folder/setting_button_unselected.png" id="8_i42df"]
+[ext_resource type="Texture2D" uid="uid://dotc4qahalw02" path="res://assets/New Folder/setting_button_selected.png" id="9_7jp70"]
+[ext_resource type="Texture2D" uid="uid://dsfhi7rah0ef1" path="res://assets/New Folder/levels_button_unselected.png" id="10_mxgkd"]
+[ext_resource type="Texture2D" uid="uid://budalyfxvvuql" path="res://assets/New Folder/levels_button_selected.png" id="11_mj5lg"]
+[ext_resource type="Texture2D" uid="uid://crj65vxtm85qp" path="res://assets/New Folder/white.png" id="12_ufwb2"]
+
+[sub_resource type="GDScript" id="GDScript_g6gyw"]
+script/source = "extends TextureButton
+"
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -12,31 +26,60 @@ script = ExtResource("1_8aat6")
 
 [node name="play_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_ugn2o")
+offset_left = -3534.0
+offset_top = 180.0
+offset_right = -1486.0
+offset_bottom = 1204.0
+texture_normal = ExtResource("2_mhnvy")
+texture_hover = ExtResource("3_4ytvr")
+script = SubResource("GDScript_g6gyw")
 
 [node name="garage_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -2060.0
+offset_top = 186.0
+offset_right = -12.0
+offset_bottom = 1210.0
+texture_normal = ExtResource("4_70i5f")
+texture_hover = ExtResource("5_mj5lg")
 
 [node name="pens_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1525.0
+offset_top = 37.0
+offset_right = 3573.0
+offset_bottom = 1061.0
+texture_normal = ExtResource("6_ufwb2")
+texture_hover = ExtResource("7_6cdou")
 
 [node name="setting_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="bg" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -1874.0
+offset_top = 1663.0
+offset_right = 174.0
+offset_bottom = 2687.0
+texture_normal = ExtResource("8_i42df")
+texture_hover = ExtResource("9_7jp70")
 
 [node name="level_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -299.0
+offset_top = 86.0
+offset_right = 1749.0
+offset_bottom = 1110.0
+texture_normal = ExtResource("10_mxgkd")
+texture_hover = ExtResource("11_mj5lg")
+
+[node name="bg" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -6534.0
+offset_top = -5915.0
+offset_right = 6772.0
+offset_bottom = 4956.0
+mouse_filter = 2
+texture = ExtResource("12_ufwb2")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.05, 0.05)
