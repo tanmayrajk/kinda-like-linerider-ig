@@ -39,6 +39,7 @@ func generate_wall():
 	
 	var tom_poly = Polygon2D.new()
 	tom_poly.polygon = tom_points
+	tom_poly.color = Color("#9e2a2b")
 	var tom_body := StaticBody2D.new()
 	tom_body.collision_layer = 3
 	var tom_collision := CollisionPolygon2D.new()
@@ -50,6 +51,7 @@ func generate_wall():
 	add_child(tom_wall)
 	var top_poly = Polygon2D.new()
 	top_poly.polygon = top_points
+	top_poly.color = Color("#9e2a2b")
 	var top_body := StaticBody2D.new()
 	top_body.collision_layer = 3
 	var top_collision := CollisionPolygon2D.new()

@@ -13,6 +13,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			
 			if drawing:
 				current_line = Line2D.new()
+				current_line.default_color = Color("e09f3e")
 				current_line.width = 10.0
 				current_line.begin_cap_mode = Line2D.LINE_CAP_ROUND
 				current_line.end_cap_mode = Line2D.LINE_CAP_ROUND

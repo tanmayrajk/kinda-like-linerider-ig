@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://deru5l3t1hrsp" path="res://scripts/camera.gd" id="2_sugp2"]
 [ext_resource type="AudioStream" uid="uid://pqb1v08r7h1r" path="res://assets/draw.wav" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://c6qghoxtg1c55" path="res://scripts/the_strokes.gd" id="3_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://crj65vxtm85qp" path="res://assets/New Folder/white.png" id="4_85g3d"]
 [ext_resource type="Script" uid="uid://d2gllhgjhfrom" path="res://scripts/wall_spawner.gd" id="4_sfrgt"]
 [ext_resource type="AudioStream" uid="uid://cnj8b4e4rlrwx" path="res://assets/noise pollution v3.wav" id="6_tefeu"]
 [ext_resource type="Texture2D" uid="uid://bewwh26wns4v2" path="res://assets/New Folder/brush.png" id="7_o6xl0"]
@@ -12,6 +13,12 @@
 [node name="main" type="Node2D" unique_id=1209180813 node_paths=PackedStringArray("cusor_node")]
 script = ExtResource("1_tipki")
 cusor_node = NodePath("cursor")
+
+[node name="bg" type="Sprite2D" parent="." unique_id=1339314104]
+modulate = Color(0.32941177, 0.043137256, 0.05490196, 1)
+position = Vector2(134.49997, 136.49998)
+scale = Vector2(6.898649, 4.560811)
+texture = ExtResource("4_85g3d")
 
 [node name="player" parent="." unique_id=534280259 node_paths=PackedStringArray("camera") instance=ExtResource("2_0wfyh")]
 position = Vector2(78, 160)
