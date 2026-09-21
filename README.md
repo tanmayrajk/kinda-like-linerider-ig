@@ -10,6 +10,12 @@ a game where you uh a ride lines or sumn idk.
 
 ## how to play?
 
+[play it on itch](https://tanmayrajkrishna.itch.io/kinda-like-linerider-ig)
+
+---
+
+## controls
+
 mouse left click draws the line. keep your player on the line and don't let it fall or touch the walls.
 
 ---
