@@ -12,11 +12,14 @@ func _ready() -> void:
 	pen_1.visible = true
 	pen_2.visible = false
 	pen_3.visible = false
+	
 	left_btn.pressed.connect(left_slide)
+	
 	right_btn.pressed.connect(right_slide)
 	back_btn.pressed.connect(back)
 	
 	
+
 
 
 func left_slide():
