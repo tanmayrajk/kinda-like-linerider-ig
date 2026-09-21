@@ -39,13 +39,23 @@ func generate_wall():
 	
 	var tom_poly = Polygon2D.new()
 	tom_poly.polygon = tom_points
+	var tom_body := StaticBody2D.new()
+	var tom_collision := CollisionPolygon2D.new()
+	tom_collision.polygon = tom_points
+	tom_body.add_child(tom_collision)
 	var tom_wall = Node2D.new()
 	tom_wall.add_child(tom_poly)
+	tom_wall.add_child(tom_body)
 	add_child(tom_wall)
 	var top_poly = Polygon2D.new()
 	top_poly.polygon = top_points
+	var top_body := StaticBody2D.new()
+	var top_collision := CollisionPolygon2D.new()
+	top_collision.polygon = top_points
+	top_body.add_child(top_collision)
 	var top_wall = Node2D.new()
 	top_wall.add_child(top_poly)
+	top_wall.add_child(top_body)
 	add_child(top_wall)
 	
 	top_wall.global_position = top_wall_anchor.global_position
