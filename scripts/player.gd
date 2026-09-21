@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@export var camera: Camera2D
 
 const JUMP_VELOCITY = -350.0
 const JUMP_CUT = 0.5
 
 func _ready() -> void:
 	#position = get_viewport_rect().size / 2
+	#camera.shake(10.0, 0.2)	
 	floor_max_angle = deg_to_rad(90.0)
 	pass
 
