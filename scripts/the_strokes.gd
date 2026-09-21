@@ -3,6 +3,9 @@ extends Node2D
 var drawing := false
 var current_line: Line2D
 
+@export var speed := 67
+@export var cam: Camera2D
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -16,6 +19,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				current_line.joint_mode = Line2D.LINE_JOINT_ROUND
 				
 				var body := StaticBody2D.new()
+				body.collision_layer = 2
 				#body.sync_to_physics = true
 				current_line.add_child(body)
 				
@@ -25,8 +29,14 @@ func _unhandled_input(event: InputEvent) -> void:
 				current_line.add_point(point)
 
 func _process(delta: float) -> void:
+	position.x -= speed * delta
+	
 	if not drawing:
 		return
+	
+	$draw_sound.play()
+	
+	cam.shake(0.67, 0.01)
 	
 	var new_point := current_line.to_local(get_global_mouse_position())
 	var old_point := current_line.points[-1]

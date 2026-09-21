@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@export var camera: Camera2D
 
 const JUMP_VELOCITY = -350.0
 const JUMP_CUT = 0.5
 
 func _ready() -> void:
 	#position = get_viewport_rect().size / 2
+	#camera.shake(10.0, 0.2)	
 	floor_max_angle = deg_to_rad(90.0)
 	pass
 
@@ -34,3 +36,11 @@ func _physics_process(delta: float) -> void:
 	sprite.play("idle")
 
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var collision := get_slide_collision(i)
+		var collider := collision.get_collider()
+		
+		if collider is StaticBody2D and collider.collision_layer == 3:
+			print("GAME OVER!")
+			get_tree().call_deferred("change_scene_to_file", "res://scenes/menu.tscn")
