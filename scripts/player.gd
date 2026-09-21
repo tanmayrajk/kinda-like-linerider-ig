@@ -34,3 +34,11 @@ func _physics_process(delta: float) -> void:
 	sprite.play("idle")
 
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var collision := get_slide_collision(i)
+		var collider := collision.get_collider()
+		
+		if collider is StaticBody2D and collider.collision_layer == 3:
+			print("GAME OVER!")
+			get_tree().call_deferred("change_scene_to_file", "res://scenes/menu.tscn")
