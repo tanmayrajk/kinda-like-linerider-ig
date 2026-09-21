@@ -12,6 +12,7 @@ func _ready() -> void:
 	pens_button.pressed.connect(pens_select)
 	level_button.pressed.connect(level_select)
 	setting_button.pressed.connect(setting_open)
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 func play():
 	get_tree().change_scene_to_file("res://scenes/main.tscn")

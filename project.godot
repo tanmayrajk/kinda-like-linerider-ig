@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="pass it up"
-run/main_scene="uid://uey54unyj4jv"
+run/main_scene="uid://vi7dl71vomv4"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

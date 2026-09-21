@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dsfhi7rah0ef1" path="res://assets/New Folder/levels_button_unselected.png" id="10_mxgkd"]
 [ext_resource type="Texture2D" uid="uid://budalyfxvvuql" path="res://assets/New Folder/levels_button_selected.png" id="11_mj5lg"]
 [ext_resource type="Texture2D" uid="uid://crj65vxtm85qp" path="res://assets/New Folder/white.png" id="12_ufwb2"]
+[ext_resource type="AudioStream" uid="uid://cm3wurnht5mew" path="res://assets/menu bgm.wav" id="13_6cdou"]
 
 [sub_resource type="GDScript" id="GDScript_g6gyw"]
 script/source = "extends TextureButton
@@ -83,3 +84,7 @@ metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=918958250]
 zoom = Vector2(0.05, 0.05)
+
+[node name="bgm" type="AudioStreamPlayer" parent="." unique_id=1938793503]
+stream = ExtResource("13_6cdou")
+autoplay = true
